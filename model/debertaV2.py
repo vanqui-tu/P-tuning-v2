@@ -1015,12 +1015,7 @@ class DebertaV2Model(DebertaV2PreTrainedModel):
         raise NotImplementedError("The prune function is not implemented in DeBERTa model.")
 
     @add_start_docstrings_to_model_forward(DEBERTA_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
-    @add_code_sample_docstrings(
-        tokenizer_class=_TOKENIZER_FOR_DOC,
-        checkpoint=_CHECKPOINT_FOR_DOC,
-        output_type=SequenceClassifierOutput,
-        config_class=_CONFIG_FOR_DOC,
-    )
+
     def forward(
         self,
         input_ids=None,
@@ -1132,12 +1127,7 @@ class DebertaV2ForMaskedLM(DebertaV2PreTrainedModel):
         self.cls.predictions.decoder = new_embeddings
 
     @add_start_docstrings_to_model_forward(DEBERTA_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
-    @add_code_sample_docstrings(
-        tokenizer_class=_TOKENIZER_FOR_DOC,
-        checkpoint=_CHECKPOINT_FOR_DOC,
-        output_type=MaskedLMOutput,
-        config_class=_CONFIG_FOR_DOC,
-    )
+
     def forward(
         self,
         input_ids=None,
@@ -1273,12 +1263,7 @@ class DebertaV2ForSequenceClassification(DebertaV2PreTrainedModel):
         self.deberta.set_input_embeddings(new_embeddings)
 
     @add_start_docstrings_to_model_forward(DEBERTA_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
-    @add_code_sample_docstrings(
-        tokenizer_class=_TOKENIZER_FOR_DOC,
-        checkpoint=_CHECKPOINT_FOR_DOC,
-        output_type=SequenceClassifierOutput,
-        config_class=_CONFIG_FOR_DOC,
-    )
+
     def forward(
         self,
         input_ids=None,
@@ -1371,12 +1356,7 @@ class DebertaV2ForTokenClassification(DebertaV2PreTrainedModel):
             param.requires_grad = False
 
     @add_start_docstrings_to_model_forward(DEBERTA_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
-    @add_code_sample_docstrings(
-        tokenizer_class=_TOKENIZER_FOR_DOC,
-        checkpoint=_CHECKPOINT_FOR_DOC,
-        output_type=TokenClassifierOutput,
-        config_class=_CONFIG_FOR_DOC,
-    )
+
     def forward(
         self,
         input_ids=None,
@@ -1460,12 +1440,7 @@ class DebertaV2ForQuestionAnswering(DebertaV2PreTrainedModel):
         self.init_weights()
 
     @add_start_docstrings_to_model_forward(DEBERTA_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
-    @add_code_sample_docstrings(
-        tokenizer_class=_TOKENIZER_FOR_DOC,
-        checkpoint=_CHECKPOINT_FOR_DOC,
-        output_type=QuestionAnsweringModelOutput,
-        config_class=_CONFIG_FOR_DOC,
-    )
+
     def forward(
         self,
         input_ids=None,
