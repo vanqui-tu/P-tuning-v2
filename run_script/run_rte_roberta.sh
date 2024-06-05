@@ -5,8 +5,8 @@ export CUDA_VISIBLE_DEVICES=0
 bs=32
 lr=5e-3
 dropout=0.1
-psl=128
-epoch=100
+psl=20 #128
+epoch=25 #100
 
 python3 run.py \
   --model_name_or_path roberta-large \
