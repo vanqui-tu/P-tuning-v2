@@ -24,6 +24,7 @@ python3 run.py \
   --hidden_dropout_prob $dropout \
   --seed 11 \
   --evaluation_strategy epoch \
+  --prefix \
   --prefix_projection \
   --load_best_model_at_end \
   --save_strategy epoch \
