@@ -18,6 +18,9 @@ logger = logging.getLogger(__name__)
 def get_trainer(args):
     model_args, data_args, training_args, _ = args
 
+    training_args.metric_for_best_model = "eval_accuracy"
+    training_args.greater_is_better = True
+
     log_level = training_args.get_process_log_level()
     logger.setLevel(log_level)
 
