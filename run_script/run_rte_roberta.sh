@@ -27,6 +27,4 @@ python3 run.py \
   --prefix_projection \
   --load_best_model_at_end \
   --save_strategy epoch \
-  --save_total_limit 1 \ 
-  --metric_for_best_model eval_accuracy \
-  --greater_is_better
+  --save_total_limit 1 
