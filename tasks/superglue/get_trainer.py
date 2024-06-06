@@ -18,6 +18,9 @@ logger = logging.getLogger(__name__)
 def get_trainer(args):
     model_args, data_args, training_args, _ = args
 
+    training_args.load_best_model_at_end = True
+    training_args.save_strategy = "epoch"
+
     log_level = training_args.get_process_log_level()
     logger.setLevel(log_level)
 
