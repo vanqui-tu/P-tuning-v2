@@ -6,7 +6,7 @@ bs=32
 lr=2e-5
 dropout=0.1
 psl=20 #128
-epoch=50 #100
+epoch=20 #100
 
 python3 run.py \
   --model_name_or_path roberta-large \
