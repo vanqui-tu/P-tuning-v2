@@ -27,4 +27,4 @@ python3 run.py \
   --prefix_projection \
   --load_best_model_at_end \
   --save_strategy epoch \
-  --save_total_limit 2
+  --save_total_limit 1
