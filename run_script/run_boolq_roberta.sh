@@ -23,7 +23,6 @@ python3 run.py \
   --overwrite_output_dir \
   --hidden_dropout_prob $dropout \
   --seed 11 \
-  --save_strategy no \
   --evaluation_strategy epoch \
   --prefix
   --load_best_model_at_end \
