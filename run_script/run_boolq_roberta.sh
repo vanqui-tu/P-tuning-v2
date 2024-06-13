@@ -3,10 +3,10 @@ export DATASET_NAME=boolq
 export CUDA_VISIBLE_DEVICES=0
 
 bs=32
-lr=7e-3
+lr=5e-3
 dropout=0.1
-psl=20
-epoch=25
+psl=16
+epoch=50
 
 python3 run.py \
   --model_name_or_path roberta-large \
@@ -26,3 +26,6 @@ python3 run.py \
   --save_strategy no \
   --evaluation_strategy epoch \
   --prefix
+  --load_best_model_at_end \
+  --save_strategy epoch \
+  --save_total_limit 1 
