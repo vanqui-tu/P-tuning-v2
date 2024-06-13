@@ -24,7 +24,7 @@ python3 run.py \
   --hidden_dropout_prob $dropout \
   --seed 11 \
   --evaluation_strategy epoch \
-  --prefix
+  --prefix \
   --load_best_model_at_end \
   --save_strategy epoch \
   --save_total_limit 1 
