@@ -95,7 +95,7 @@ class SuperGlueDataset():
             if data_args.max_predict_samples is not None:
                 self.predict_dataset = self.predict_dataset.select(range(data_args.max_predict_samples))
 
-        self.metric = load_metric("super_glue", data_args.dataset_name)
+        self.metric = load_metric("super_glue", data_args.dataset_name, trust_remote_code=True)
 
         if data_args.pad_to_max_length:
             self.data_collator = default_data_collator
