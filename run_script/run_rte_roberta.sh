@@ -3,10 +3,10 @@ export DATASET_NAME=rte
 export CUDA_VISIBLE_DEVICES=0
 
 bs=32
-lr=5e-3
+lr=7e-3
 dropout=0.1
 psl=20 #128
-epoch=5 #100
+epoch=100 
 
 python3 run.py \
   --model_name_or_path roberta-large \
