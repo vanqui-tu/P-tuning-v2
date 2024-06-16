@@ -3,10 +3,10 @@ export DATASET_NAME=boolq
 export CUDA_VISIBLE_DEVICES=0
 
 bs=32
-lr=5e-3
+lr=7e-3
 dropout=0.1
-psl=16
-epoch=25
+psl=20
+epoch=100
 
 python3 run.py \
   --model_name_or_path roberta-large \
