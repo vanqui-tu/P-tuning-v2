@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 class SuperGlueDataset():
     def __init__(self, tokenizer: AutoTokenizer, data_args, training_args) -> None:
         super().__init__()
-        raw_datasets = load_dataset("super_glue", data_args.dataset_name)
+        raw_datasets = load_dataset("super_glue", data_args.dataset_name, trust_remote_code=True)
         self.tokenizer = tokenizer
         self.data_args = data_args
 
